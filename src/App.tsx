@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Button, Typography, Box } from '@mui/material';
+import { Typography, Box } from '@mui/material';
+import { LoadingButton } from '@mui/lab';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
@@ -18,9 +19,9 @@ function App() {
         </a>
       </Box>
       <Typography variant="h1">Vite + React + MUI + Replay.io Test</Typography>
-      <Button variant="outlined" onClick={() => setCount((count) => count + 1)}>
+      <LoadingButton loading={count === 5} variant="outlined" onClick={() => setCount((count) => count + 1)}>
         count is {count}
-      </Button>
+      </LoadingButton>
       <Typography>
         Edit <code>src/App.tsx</code> and save to test HMR
       </Typography>
